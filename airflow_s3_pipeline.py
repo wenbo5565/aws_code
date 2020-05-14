@@ -41,7 +41,8 @@ def save_to_s3(**kwargs):
     
 dag = DAG(
           'create_df_and_dump_to_s3',
-           start_date = datetime.datetime.now())
+           start_date = datetime.datetime.now(),
+           schedule_interval = '@daily')
 
 create_df = PythonOperator(
         task_id = 'create_df',
