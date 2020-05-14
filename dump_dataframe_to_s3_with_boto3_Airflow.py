@@ -10,7 +10,7 @@ from io import StringIO
 #####################
 aws_access_key_id = ''
 aws_access_key = ''
-bucket = 'wenbo-udacity-eng'
+bucket = ''
 
 ######################
 # create a data frame
