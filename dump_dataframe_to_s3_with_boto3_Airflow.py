@@ -1,5 +1,8 @@
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
+from airflow.models import Variable
+from airflow.hook.S3_hook import S3HOOK
+
 import datetime
 import boto3
 import pandas as pd
