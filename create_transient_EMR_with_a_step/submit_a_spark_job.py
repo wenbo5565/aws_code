@@ -41,6 +41,3 @@ now = datetime.now().strftime('%Y-%m-%d-%H-%M-%S-%f')
 users_table_output = data_output + '/users_table_parquet' + '_' + now
 
 users_table.write.parquet(users_table_output)
-
-test_df = pd.DataFrame({'sequence':'test_string'})
-test_df.to_csv(data_output + '/test.csv')
