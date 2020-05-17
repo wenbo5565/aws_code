@@ -1,0 +1,8 @@
+aws emr create-cluster 
+--release-label emr-5.30.0  
+--instance-groups InstanceGroupType=MASTER,InstanceCount=1,InstanceType=m4.xlarge InstanceGroupType=CORE,InstanceCount=1,InstanceType=m4.xlarge 
+--use-default-roles 
+--ec2-attributes KeyName=ec2_wenbo
+--applications Name=JupyterHub Name=Spark Name=Hadoop Name=Hive 
+--name=“EMR-Spark” 
+--log-uri s3://BUCKET-NAME
